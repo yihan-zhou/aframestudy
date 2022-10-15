@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <title>Beginning</title>
+</head>
+<body>
+    <!-- <a-scene>
+        <a-entity
+        geometry="primitive: box";
+        width="1";
+        height="1"
+        ></a-entity>
+
+        <a-box
+            position="2 0 0"
+            color="red"
+        ></a-box>
+
+        <a-entity camera look-controls wasd-controls position="0 1 5" acceleration="25"></a-entity>
+    </a-scene> -->
+
+    <a-scene antialias="true">
+        <a-assets>
+            <!-- <a-asset-item id="tree-obj" src="https://rawgit.com/mrdoob/three.js/dev/examples/obj/cubes/cubes.obj"></a-asset-item> -->
+            <img src="../images/flower_1.png" id="flower" />
+            <img id="blur-image" src="../images/glow_green.png">
+            <a-asset-item id = 'whale' src = "../models/Whale.obj"></a-asset-item>
+            <img id="cat" src="https://media.giphy.com/media/sIIhZliB2McAo/giphy.gif"/>
+            <video id="sky" src="../video/sky.mp4" autoplay="true"></video>
+        </a-assets>
+
+        <a-image position="-0.265 0.217 0.532" src="#blur-image"></a-image>
+        <a-light position="-0.265 0.217 0.532" type="point" intensity="1.5" color="#00E6FF"></a-light>
+        <a-light type="ambient" intensity=".3" color="#00E6FF"></a-light>
+        
+        <a-entity spawner obj-model="obj: #whale" position="0 0 0" scale = "0.2 0.2 0.2 " material="color: orange" modify-materials></a-entity>
+        <a-plane position="0 0 0" rotation="-90 0 0" width="100" height="100" color="#333333"></a-plane>
+        <!-- <a-plane position="0 0 -4" rotation="-90 0 0" scale = "360 360 1 " thetaLength = "246" thetaStart = "-32" width="4" height="4" color="black"></a-plane> -->
+        <!-- <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" material="src: #cat "></a-cylinder> -->
+        <!-- <a-sky color="#black" material="src: #sky "></a-sky> -->
+        <!-- <a-sky color="#black"></a-sky> -->
+        <!-- <a-scene fog="type: exponential; density: 0.15; color: #10454A;"></a-scene> -->
+    </a-scene>
+    
+</body>
+</html>
